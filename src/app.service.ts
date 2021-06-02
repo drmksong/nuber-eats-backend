@@ -15,6 +15,6 @@ export class AppService {
       return 'Hi everyone!!!';
   }
   getUsers() : UserType {
-      return {name:'Song Myung', age:10, phone: '987-6543'};
+      return {name:'Song Myung Kyu', age:53, phone: '010-1987-6543'};
   }
 }
