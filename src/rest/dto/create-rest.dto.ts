@@ -1,10 +1,11 @@
 import { ArgsType, Field } from '@nestjs/graphql';
-import { IsString, IsBoolean } from 'class-validator';
+import { IsString, IsBoolean, Length } from 'class-validator';
 
 @ArgsType () 
 export class CreateRestDTO {
     @Field(()=>String) 
     @IsString()
+    @Length(5,10)
     name : string;
     
     @Field(()=>Boolean) 
