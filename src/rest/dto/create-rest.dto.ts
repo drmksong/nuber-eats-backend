@@ -1,18 +1,18 @@
-import { InputType } from '@nestjs/graphql';
+import { ArgsType, Field } from '@nestjs/graphql';
 
-@InputType () 
+@ArgsType () 
 export class CreateRestDTO {
     @Field(()=>String) 
-    name : string,
+    name : string;
     
     @Field(()=>Boolean) 
-    isVegan : boolean,
+    isVegan : boolean;
     
     @Field(()=>String) 
-    adress : string,
+    address : string;
     
     @Field(()=>String) 
-    ownerName : string
+    ownerName : string;
     
 }
    

@@ -9,7 +9,7 @@ export class Rest {
     isVegan : boolean;
     
     @Field(()=>String)
-    adress : string;
+    address : string;
     
     @Field(()=>String)
     ownerName : string;

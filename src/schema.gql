@@ -5,7 +5,7 @@
 type Rest {
   name: String!
   isVegan: Boolean!
-  adress: String!
+  address: String!
   ownerName: String!
 }
 
@@ -14,5 +14,5 @@ type Query {
 }
 
 type Mutation {
-  createRest(ownerName: String!, adress: String!, isVegan: Boolean!, name: String!): Boolean!
+  createRest(name: String!, isVegan: Boolean!, address: String!, ownerName: String!): Boolean!
 }
