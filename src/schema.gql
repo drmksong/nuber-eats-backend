@@ -2,6 +2,17 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Rest {
+  name: String!
+  isVegan: Boolean!
+  adress: String!
+  ownerName: String!
+}
+
 type Query {
-  isGood: Boolean!
+  rests(veganOnly: Boolean!): [Rest!]!
+}
+
+type Mutation {
+  createRest(ownerName: String!, adress: String!, isVegan: Boolean!, name: String!): Boolean!
 }

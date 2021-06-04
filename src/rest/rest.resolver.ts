@@ -1,9 +1,17 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { Rest } from './entities/rest.entity';
 
-@Resolver()
+@Resolver(()=>Rest)
 export class RestResolver {
-    @Query(()=>Boolean)
-    isGood() : boolean {
+    @Query(()=>[Rest])
+    rests(@Args('veganOnly') veganOnly : boolean) : Rest[] {
+        return [];
+    }
+    @Mutation(()=>Boolean) 
+    createRest( @Args('name') name : string,
+                @Args('isVegan') isVegan : boolean,
+                @Args('adress') adress : string,
+                @Args('ownerName') ownerName : string) : boolean {
         return true;
     }
 }
